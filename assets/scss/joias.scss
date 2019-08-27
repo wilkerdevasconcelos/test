@@ -270,6 +270,7 @@ nav.menu {
         }
       }
     }
+    // PRODUTOS LANÇAMENTOS
     h2.lancamento {
       background-image: url(../imgs/back-title.png);
       background-position: center center;
@@ -281,6 +282,187 @@ nav.menu {
       font-family: $font-georgia;
       font-weight: 300;
       margin: 5vh 0;
+    }
+    .produtos-lancamentos {
+      display: flex;
+      justify-content: space-between;
+      .item {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 15px;
+        &:hover {
+          box-shadow: -1px 0 3px rgba(0, 0, 0, 0.16);
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .titulo {
+          font-size: 15px;
+          color: $cinza-base;
+          font-family: $font-georgia;
+          letter-spacing: 2px;
+          font-weight: 300;
+          text-transform: uppercase;
+          padding: 5px 20px;
+          text-align: center;
+        }
+        .precos {
+          display: flex;
+          justify-content: space-between;
+          padding: 15px 22%;
+          .promo {
+            text-decoration: line-through;
+          }
+          .preco {
+            color: #000;
+            font-weight: bold;
+          }
+        }
+        .vezes {
+          font-size: 12px;
+          text-align: center;
+          padding: 15px 0;
+        }
+        .comprar {
+          padding: 15px 0;
+          display: flex;
+          justify-content: center;
+          button {
+            background: $primary-color;
+            color: $branco;
+            border: 0;
+            padding: 8px 25px;
+            text-transform: uppercase;
+            &:hover {
+              background: darken($primary-color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// GALERIA
+.galeria {
+  position: relative;
+  .content {
+    width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .outra,
+    .principal {
+      flex: 1;
+      height: 710px;
+    }
+    .item {
+      margin: 5px;
+      display: flex;
+      background-size: cover;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 5px;
+      h4 {
+        background-color: $cinza-claro;
+        font-size: 20px;
+        padding: 8px 15px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-family: $font-georgia;
+      }
+    }
+    .outra {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .item {
+        flex: 1;
+        height: 50%;
+      }
+    }
+  }
+}
+
+// INSTAGRM
+.instagram {
+  position: relative;
+  border-top: 1px solid $cinza-claro;
+  border-bottom: 1px solid $cinza-claro;
+  margin-top: 3vh;
+  padding: 5vh 0;
+  .content {
+    width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .instagram-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 5vh 0 6vh;
+      a {
+        display: inline-block;
+        color: $cinza-base;
+        font-size: 25px;
+        padding: 15px 0 7px 0;
+        border-bottom: 1px solid $cinza-base;
+        text-transform: uppercase;
+      }
+    }
+    .galeria-instagram {
+      display: flex;
+      .item {
+        padding: 8px;
+      }
+    }
+  }
+}
+
+// NEWSLETTER
+.newsletter {
+  position: relative;
+  padding: 15px 0;
+  .content {
+    display: flex;
+    width: 1260px;
+    margin: 0 auto;
+    justify-content: space-between;
+    .col {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 15px;
+      text-transform: uppercase;
+      &:first-child {
+        img {
+          margin-right: 10px;
+        }
+      }
+      &:last-child {
+        justify-content: flex-end;
+      }
+      a {
+        padding: 5px;
+      }
+      input {
+        width: 93%;
+        padding: 8px 10px;
+        border: 1px solid $cinza-base;
+      }
+      button {
+        width: 7%;
+        padding: 4px 0;
+        background: $cinza-base;
+        color: $cinza-claro;
+        border: 1px solid $cinza-base;
+        font-size: 20px;
+      }
     }
   }
 }
