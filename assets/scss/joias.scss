@@ -1,4 +1,286 @@
-sass --watch input.scss output.css
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-$font-stack: fantasy;
-$primary-color: lightcoral;
+$font-family: "Open Sans", sans-serif;
+$font-georgia: Georgia, "Times New Roman", Times, serif;
+$primary-color: #fab49b;
+$cinza-base: #676767;
+$cinza-claro: #dee3e6;
+$branco: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: $branco;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $cinza-base;
+}
+
+body,
+input,
+button {
+  font-family: $font-family;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// MAIN HEADER
+.main {
+  background-color: $primary-color;
+  .content {
+    display: flex;
+    justify-content: flex-end;
+    width: 1260px;
+    margin: 0 auto;
+    a {
+      text-transform: uppercase;
+      color: $cinza-base;
+      padding: 2px 15px;
+    }
+  }
+}
+
+// HEADER
+header.cabecalho {
+  position: relative;
+  padding: 5vh 0;
+  background: $branco;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1260px;
+    margin: 0 auto;
+    .pesquisar {
+      width: 235px;
+      input {
+        border: 0;
+        width: 100%;
+        border-bottom: 1px solid $cinza-claro;
+        padding: 8px 35px 8px 10px;
+        background-image: url(../imgs/search.png);
+        background-position: 95% center;
+        background-repeat: no-repeat;
+      }
+    }
+    .compras {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      span {
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+// MENU
+nav.menu {
+  position: relative;
+  background-color: $branco;
+  border-bottom: 2px solid $primary-color;
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1260px;
+    margin: 0 auto;
+    a {
+      color: $cinza-base;
+      font-size: 15px;
+      text-transform: uppercase;
+      margin: 10px 0;
+      padding: 1px 0 2px 0;
+      border-top: 1px solid $branco;
+      border-bottom: 1px solid $branco;
+      font-family: $font-georgia;
+      &:hover {
+        color: $primary-color;
+        border-top: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+      }
+    }
+  }
+}
+
+// SLIDE
+.carroussel {
+  position: relative;
+  .item {
+    height: 580px;
+    background-size: cover;
+    background-position: 50% 50%;
+    .content-slide {
+      width: 40%;
+      margin-left: 20%;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      h4 {
+        font-size: 21px;
+        font-weight: 300;
+      }
+      h2 {
+        font-size: 56px;
+        font-family: $font-georgia;
+        letter-spacing: 10px;
+        margin: 30px 0;
+      }
+      button {
+        background: $primary-color;
+        color: $cinza-base;
+        padding: 8px 15px;
+        border: 0;
+      }
+    }
+  }
+}
+
+// INFORAÇÔES
+.informacoes {
+  position: relative;
+  background-color: $cinza-claro;
+  color: $cinza-base;
+  padding: 3vh 0;
+  margin: 5px 0;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1260px;
+    margin: 0 auto;
+    span {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// DESTAQUES
+.destaque-categorias {
+  position: relative;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  .destaque {
+    flex: 1;
+    display: flex;
+    height: 470px;
+    background-size: cover;
+    background-position: 50% 25%;
+    align-items: flex-end;
+    justify-content: center;
+    &:first-child {
+      margin-right: 5px;
+    }
+    h4 {
+      background-color: $cinza-claro;
+      font-size: 20px;
+      padding: 8px 15px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      font-family: $font-georgia;
+    }
+  }
+}
+
+// Produtos
+.destaque-produtos {
+  position: relative;
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 1260px;
+    margin: 0 auto;
+    .tumb-top {
+      width: 100%;
+      display: flex;
+      height: 250px;
+      background-size: cover;
+      background-position: 50% 25%;
+      align-items: flex-end;
+      justify-content: center;
+      margin-bottom: 5px;
+      h4 {
+        background-color: $cinza-claro;
+        font-size: 20px;
+        padding: 8px 15px;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-family: $font-georgia;
+      }
+    }
+    .produtos {
+      display: flex;
+      justify-content: space-between;
+      .item {
+        border: 1px solid $cinza-claro;
+        display: flex;
+        flex: 1;
+        align-items: center;
+        &:nth-child(2) {
+          margin: 0 5px;
+        }
+        .infos {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          h3 {
+            font-size: 24px;
+            font-family: $font-georgia;
+            font-weight: 300;
+            margin-bottom: 15px;
+          }
+          button {
+            font-size: 12px;
+            color: $cinza-base;
+            border: 1px solid $cinza-base;
+            padding: 5px 10px;
+            background: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    h2.lancamento {
+      background-image: url(../imgs/back-title.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      font-size: 26px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: $font-georgia;
+      font-weight: 300;
+      margin: 5vh 0;
+    }
+  }
+}
